@@ -1,0 +1,14 @@
+{
+	"name": "jest-react",
+	"version": "1.0.0",
+	"description": "",
+	"main": "scr/index.js",
+	"scripts": {
+		"test": "jest"
+	},
+	"author": "",
+	"license": "MIT",
+	"devDependencies": {
+		"jest": "^26.1.0"
+	}
+}
