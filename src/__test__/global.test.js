@@ -4,11 +4,6 @@ const numbr = 10
 const bool = true
 
 describe('Tests globales', () => {
-	beforeAll(() => console.log('Antes de todas las pruebas'))
-	beforeEach(() => console.log('Antes de cada prueba'))
-	afterAll(() => console.log('Después de todas las pruebas'))
-	afterEach(() => console.log('Después de cada prueba'))
-
 	describe('Variable text', () => {
 		test('Debe contener un Mundo', () => {
 			expect(text).toMatch(/Mundo/)
