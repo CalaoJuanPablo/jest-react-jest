@@ -11,4 +11,14 @@ function randomString() {
 	return str
 }
 
-module.exports = randomString
+const reverseString2 = str =>
+	new Promise((resolve, reject) => {
+		if (!str) reject(Error('Error'))
+
+		resolve(str.split('').reverse().join(''))
+	})
+
+module.exports = {
+	randomString,
+	reverseString2
+}

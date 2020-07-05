@@ -1,3 +1,4 @@
+const { reverseString2 } = require('../index')
 const text = 'Hola Mundo'
 const fruits = ['manzana', 'melon', 'banana']
 const numbr = 10
@@ -43,13 +44,6 @@ describe('Tests globales', () => {
 		})
 	})
 
-	const reverseString2 = str =>
-		new Promise((resolve, reject) => {
-			if (!str) reject(Error('Error'))
-
-			resolve(str.split('').reverse().join(''))
-		})
-
 	describe('Funcion reverseString2', () => {
 		test('Probar una promesa', () => {
 			reverseString2('Hola').then(str => expect(str).toBe('aloH'))
@@ -58,6 +52,14 @@ describe('Tests globales', () => {
 		test('Probar una promesa con async/await', async () => {
 			const str = await reverseString2('Hola')
 			expect(str).toBe('aloH')
+		})
+
+		test('Probar cuando no recibe parámetro', async () => {
+			try {
+				await reverseString2()
+			} catch (error) {
+				expect(error).toBeTruthy()
+			}
 		})
 	})
 })

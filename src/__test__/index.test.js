@@ -1,4 +1,4 @@
-const randomString = require('../index')
+const { randomString } = require('../index')
 
 describe('Funcionalidades de función randomString', () => {
 	test('Probar la funcionalidad', () => {
